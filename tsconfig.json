@@ -1,9 +1,11 @@
 {
-  "target": "es2020",
-  "module": "commonjs",
-  "moduleResolution": "node",
-  "esModuleInterop": true,
-  "strict": true,
-  "outDir": "./dist",
-  "rootDir": "./src"
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
+  }
 }
