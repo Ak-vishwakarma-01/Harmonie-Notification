@@ -4,6 +4,9 @@
   "main": "index.js",
   "type": "module",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts --exec \"node --loader ts-node/esm\" src/index.ts"
+  },
   "dependencies": {
     "bullmq": "^5.52.2",
     "cors": "^2.8.5",
@@ -13,7 +16,8 @@
   },
   "devDependencies": {
     "@types/node": "^22.15.18",
+    "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.x"
   }
 }
