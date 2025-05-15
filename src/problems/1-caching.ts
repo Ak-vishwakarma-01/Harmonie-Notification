@@ -3,14 +3,8 @@
  * reduce the calls to the network and make the function faster
  */
 
-import { Redis } from "ioredis";
-import { REDIS_URL } from "../config/index.js";
-
-const client = new Redis(REDIS_URL); // connecting upstash redish
-
-(async function () {
-  await client.flushall(); // clear upstash 
-})();
+// Redish connection -> flushed all
+import client from "../config/index.js";
 
 async function fetchData() {
   const response = await fetch("https://pokeapi.co/api/v2/pokemon/");
@@ -44,6 +38,7 @@ async function main() {
   console.time("fetchData again");
   await fetchWithCache(fetchData, "pokemon");
   console.timeEnd("fetchData again");
+  console.log("First cashing Completed");
 }
 
 
