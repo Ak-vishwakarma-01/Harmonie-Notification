@@ -31,3 +31,7 @@ import { sendSecondJob } from './notifications/producer2.js';
         await sendSecondJob({ message: `Job ${i} for second queue` });
     }
 })();
+
+
+export { workerFun } from "./HarmoniesNotification/workers/worker.js";
+export {likeControllers , loginControllers} from "./HarmoniesNotification/ControlerNotification/index.js";
